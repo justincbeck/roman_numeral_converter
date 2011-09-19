@@ -1,4 +1,4 @@
-if [[ -d "$rvm_path/environments" && -s "$rvm_path/environments/ruby-1.9.2-p290@roman_numerals" ] ; then
+if [[ -d "$rvm_path/environments" && -s "$rvm_path/environments/ruby-1.9.2-p290@roman_numerals" ]] ; then
   \. "$rvm_path/environments/ruby-1.9.2-p290@roman_numerals"
 else
   rvm --create use  "ruby-1.9.2-p290@roman_numerals"
