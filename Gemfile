@@ -34,6 +34,10 @@ group :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
+group :test, :development do
+  gem 'metric_fu'
+end
+
 # Other gems I need
 gem 'haml'
 gem 'rubygems-update', :group => [:development, :test]

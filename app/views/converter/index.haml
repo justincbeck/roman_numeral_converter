@@ -1,0 +1,42 @@
+.centered
+  %div#entry
+    %input#input
+    #connector
+      \=>
+    #result
+      N/A
+  %button#button{ :dojoType => "dijit.form.Button", :onclick => "javascript: submit();" }
+    OK
+
+:javascript
+  dojo.require("dijit.form.Button");
+  dojo.require("dijit.Tooltip");
+
+  submit = function() {
+    dojo.xhrGet({
+      url: "#{convert_url}",
+      content: {
+        "candidate" : dojo.byId("input").value
+      },
+      method: "get",
+      handleAs: "json",
+      load: function(data) {
+        dojo.byId("result").innerText = data["result"];
+      },
+      error: function(err) {
+        dojo.byId("result").innerText = "Invalid entry!";
+      }
+    });
+  }
+
+  // Google analytics
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25813926-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
