@@ -1,6 +1,7 @@
-.idea/
 .bundle
+db/*.sqlite3
+log/*.log
 tmp/
-data/*output.txt
-coverage/
-Gemfile.lock
+.sass-cache/
+.idea/
+roman_numerals.ids
