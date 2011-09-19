@@ -1,0 +1,7 @@
+Converts arabic numbers (up to 3999) to roman numerals and roman numerals back to arabic.
+Will raise an exception (Unsupported) if you pass it something it doesn't recognize.
+
+Needs more coverage.
+
+Also needs to behave like a regular unix command.  i.e. it needs to accept input passed to it or should
+accept input from stdin and output to stdout.

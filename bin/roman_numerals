@@ -4,5 +4,7 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'bundler/setup'
 require 'roman_numerals'
 
-converter = RomanNumerals::Converter.new
+include RomanNumerals
+
+converter = Converter.new
 converter.convert ARGV[0]
