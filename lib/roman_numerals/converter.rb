@@ -31,6 +31,7 @@ module RomanNumerals
       elsif /^\w+$/.match arabic
         result = to_arabic candidate
       end
+      puts result
       result
     end
 
